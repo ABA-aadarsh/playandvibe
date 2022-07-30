@@ -161,9 +161,10 @@ sidebarSongList.forEach((item)=>{
 
 exit.addEventListener("click",()=>{
     sidebar.classList.add("hidden")
+    document.querySelector("#toggle i").classList.remove("fa-folder-open")
+    document.querySelector("#toggle i").classList.add("fa-folder")
 })
 playlisttoggle.addEventListener("click",()=>{
-    console.log("hello")
     if(sidebar.classList.contains("hidden")){
         sidebar.classList.remove("hidden")
         document.querySelector("#toggle i").classList.remove("fa-folder")
