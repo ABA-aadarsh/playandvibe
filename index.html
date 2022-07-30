@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play and Vibe</title>
+    <!-- navbar -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- main body -->
+    <link rel="stylesheet" href="style.css">
+    <!-- sidebar -->
+    <link rel="stylesheet" href="sidebar.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="navcenter">
+                <div id="logo">
+                    <img src="./Assets/logo.png" >
+                    <label >Play & Vibe</label>
+                </div>
+                <button id="toggle" >
+                    <i class="fa fa-folder"></i>
+                </button>
+            </div>
+        </nav>
+        <div class="mainbody">
+            <div class="musiccard">
+                <div class="image">
+                    <img id="gif" class="pause" src="./Assets/gif.gif" alt="" draggable="false">
+                    <img  id="musicCover" class="pause" src="" alt="">
+                </div>
+                <p class="name"></p>   
+                <div class="soundbox"></div>
+                <div class="controls">
+                    <input id="progressbar" type="range" min="0" max="500" value="0">
+                    <div class="preplaynext">
+                        <button class="previous">
+                            <i class="fa fa-step-backward"></i>
+                        </button>
+                        <button class="playpause pause">
+                            <i class="fa fa-play-circle"></i>
+                        </button>
+                        <button class="next">
+                            <i class="fa fa-step-forward"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar hidden">
+                <div class="title">
+                    <h2>Songs Playlist</h2>
+                    <button class="exit">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="./app.js"></script>
+</body>
+</html>
