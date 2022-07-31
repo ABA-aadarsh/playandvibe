@@ -17,6 +17,7 @@ progressbar.value=0
 const music= new Audio ("./Songs/Believer.webm")
 const songs=[
     { name:"Heat Waves", path:"./Songs/Heat Waves.webm", cover:"./song cover/Heat Waves.png" },
+    { name:"Perfect", path:"./Songs/Perfect.webm", cover:"./song cover/Perfect.jpg" },
     { name:"Kalo Keshma Reli mai", path:"./Songs/Kalo Keshma Reli mai.webm", cover:"./song cover/Kalo Keshma Reli mai.png" },
     { name:"The Search", path:"./Songs/The Search.webm", cover:"./song cover/The Search.png" },
     { name:"Shape of You", path:"./Songs/Shape of You.webm", cover:"./song cover/Shape of You.jpg" },
