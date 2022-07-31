@@ -127,8 +127,10 @@ progressbar.addEventListener("change",()=>{
 
 //next button
 next.addEventListener("click",()=>{
+    document.querySelector(".active").classList.remove("active")
     songIndex+=1
     songIndex=songIndex%songs.length
+    document.querySelector(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
@@ -137,12 +139,14 @@ next.addEventListener("click",()=>{
 })
 //previous button
 previous.addEventListener("click",()=>{
+    document.querySelector(".active").classList.remove("active")
     if(songIndex!=0){
         songIndex-=1
         songIndex=songIndex%songs.length
     }else{
         songIndex=songs.length-1
     }
+    document.querySelector(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
