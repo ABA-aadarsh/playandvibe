@@ -48,6 +48,9 @@ const songUpdate=(i,c="play")=>{
     musicCover.src=songs[i].cover
     songName.textContent=songs[i].name
     music.src=songs[i].path
+    
+    document.querySelector(".active").classList.remove("active")
+    document.getElementById(`${songIndex}`).classList.add("active")
 
     progressbar.value=0
     if(c!="pause"){
@@ -130,8 +133,6 @@ progressbar.addEventListener("change",()=>{
 next.addEventListener("click",()=>{
     songIndex+=1
     songIndex=songIndex%songs.length
-    document.querySelector(".active").classList.remove("active")
-    document.getElementById(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
@@ -146,8 +147,6 @@ previous.addEventListener("click",()=>{
     }else{
         songIndex=songs.length-1
     }
-    document.querySelector(".active").classList.remove("active")
-    document.getElementById(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
