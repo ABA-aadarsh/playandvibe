@@ -130,7 +130,7 @@ next.addEventListener("click",()=>{
     document.querySelector(".active").classList.remove("active")
     songIndex+=1
     songIndex=songIndex%songs.length
-    document.querySelector(`${songIndex}`).classList.add("active")
+    document.querySelector(`#${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
@@ -146,7 +146,7 @@ previous.addEventListener("click",()=>{
     }else{
         songIndex=songs.length-1
     }
-    document.querySelector(`${songIndex}`).classList.add("active")
+    document.querySelector(`#${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
