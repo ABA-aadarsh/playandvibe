@@ -180,13 +180,3 @@ playlisttoggle.addEventListener("click",()=>{
         document.querySelector("#toggle i").classList.add("fa-folder")
     }
 })
-window.addEventListener("keypress",(event)=>{
-    if(event.key==" "){
-        if(playpause.classList.contains("pause")){
-            playMode();
-        }
-        else{
-            pauseMode();
-        }
-    }
-})
