@@ -31,7 +31,7 @@ songs.forEach((element,index)=>{
     item.id=`${index}`
     item.classList.add("items")
     item.innerHTML=`
-                        <img src="${element.cover}" id="0" class="sbimg">
+                        <img src="${element.cover}"  class="sbimg">
                         <span class="sbname" >${element.name}<br></span>
                     `
     list.appendChild(item)
@@ -127,10 +127,10 @@ progressbar.addEventListener("change",()=>{
 
 //next button
 next.addEventListener("click",()=>{
-    document.querySelector(".active").classList.remove("active")
     songIndex+=1
     songIndex=songIndex%songs.length
-    document.querySelector(`#${songIndex}`).classList.add("active")
+    document.querySelector(".active").classList.remove("active")
+    document.getElementById(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
@@ -139,14 +139,14 @@ next.addEventListener("click",()=>{
 })
 //previous button
 previous.addEventListener("click",()=>{
-    document.querySelector(".active").classList.remove("active")
     if(songIndex!=0){
         songIndex-=1
         songIndex=songIndex%songs.length
     }else{
         songIndex=songs.length-1
     }
-    document.querySelector(`#${songIndex}`).classList.add("active")
+    document.querySelector(".active").classList.remove("active")
+    document.getElementById(`${songIndex}`).classList.add("active")
     if(playpause.classList.contains("pause")){
         songUpdate(songIndex,"pause")
     }else{
