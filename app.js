@@ -194,17 +194,13 @@ window.addEventListener("keypress",(event)=>{
         onoff()  
     }
 })
-
-// preventing default behaviours of next and previous button on key press
-next.addEventListener("keydown",(event)=>{
-    event.preventDefault()
-    if(event.key==" "){
-        onoff()
-    }
-})
-previous.addEventListener("keydown",(event)=>{
-    event.preventDefault()
-    if(event.key==" "){
-        onoff()
-    }
+// preventing default behaviour on following buttons on keydown event
+const buttonList=[next,previous,playlisttoggle,exit]
+buttonList.forEach((btn)=>{
+    btn.addEventListener("keydown",(event)=>{
+        event.preventDefault()
+        if(event.key==" "){
+            onoff()
+        }
+    })
 })
