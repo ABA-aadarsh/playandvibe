@@ -98,13 +98,16 @@ const pauseMode=()=>{
     musicCover.classList.add("pause")
 
 }
-playpause.addEventListener("click",()=>{
+const onoff=()=>{
     if(playpause.classList.contains("pause")){
         playMode()
     }
     else if(playpause.classList.contains("play")){
         pauseMode()
     }
+}
+playpause.addEventListener("click",()=>{
+    onoff()
 })
 music.addEventListener("timeupdate",()=>{
     let progress=parseInt((music.currentTime/music.duration)*500);
@@ -180,5 +183,28 @@ playlisttoggle.addEventListener("click",()=>{
         sidebar.classList.add("hidden")
         document.querySelector("#toggle i").classList.remove("fa-folder-open")
         document.querySelector("#toggle i").classList.add("fa-folder")
+    }
+})
+
+window.addEventListener("keypress",(event)=>{
+    event.preventDefault()
+    var pressedKey=event.key
+    // console.log(pressedKey)
+    if(pressedKey===" "){
+        onoff()  
+    }
+})
+
+// preventing default behaviours of next and previous button on key press
+next.addEventListener("keydown",(event)=>{
+    event.preventDefault()
+    if(event.key==" "){
+        onoff()
+    }
+})
+previous.addEventListener("keydown",(event)=>{
+    event.preventDefault()
+    if(event.key==" "){
+        onoff()
     }
 })
