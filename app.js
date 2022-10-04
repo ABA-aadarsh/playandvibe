@@ -17,6 +17,7 @@ progressbar.value=0
 const music= new Audio ("./Songs/Believer.webm")
 const songs=[
     { name:"Never Gonna Give You Up", path:"./Songs/Never Gonna Give You Up.webm", cover:"./song cover/Never Gonna Give You Up.png" },
+    { name:"Dandelions", path:"./Songs/Dandelions.webm", cover:"./song cover/Dandelions.jpg" },
     { name:"Heat Waves", path:"./Songs/Heat Waves.webm", cover:"./song cover/Heat Waves.png" },
     { name:"Perfect", path:"./Songs/Perfect.webm", cover:"./song cover/Perfect.jpg" },
     { name:"Kalo Keshma Reli mai", path:"./Songs/Kalo Keshma Reli mai.webm", cover:"./song cover/Kalo Keshma Reli mai.png" },
