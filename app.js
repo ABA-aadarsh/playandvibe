@@ -187,7 +187,8 @@ playlisttoggle.addEventListener("click",()=>{
     }
 })
 
-window.addEventListener("keypress",(event)=>{
+// keyboard events
+window.addEventListener("keydown",(event)=>{
     event.preventDefault()
     var pressedKey=event.key
     // console.log(pressedKey)
@@ -195,6 +196,7 @@ window.addEventListener("keypress",(event)=>{
         onoff()  
     }
 })
+
 // preventing default behaviour on following buttons on keydown event
 const buttonList=[next,previous,playlisttoggle,exit]
 buttonList.forEach((btn)=>{
